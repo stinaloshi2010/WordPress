@@ -7,4 +7,17 @@ function load_scripts(){
 }
 
 add_action('wp_enqueue_scripts','load_scripts');
+
+function config(){
+    array(
+        'wp_devs_main_menu' => 'Mian Menu',
+        'wp_devs_footer_menu' => 'Footer Menu',
+
+    ));
+}
+
+add_action('after-setup_theme', 'config',0);
+
+
 ?>
+
